@@ -1,17 +1,25 @@
 grammar Logic;
 
-program: expression ('->' expression)? ';';
+// Regras de entrada
+program: statement+;
 
-expression: orExpression;
+// Regra para declaração de circuito lógico
+statement: ID '=' expression;
 
-orExpression: andExpression ('OR' andExpression)*;
+// Expressões lógicas
+expression: term #Ter
+         | expression 'AND' term #And
+         | expression 'OR' term #Or
+         | expression 'XOR' term #Xor
+         | 'NOT' term #Not
+         ;
 
-andExpression: notExpression ('AND' notExpression)*;
+term: ID
+    | '(' expression ')'
+    ;
 
-notExpression: 'NOT' atom | atom;
+// Identificadores (nomes de variáveis)
+ID: [A-Za-z]+;
 
-atom: ID;
-
-ID: [a-zA-Z]+;
-
-WS: [ \t\r\n]+ -> skip;
+// Ignorar espaços em branco e quebras de linha
+WS: [ \t\n\r]+ -> skip; 

@@ -38,7 +38,7 @@ O comando acima executa a classe LogicMain do compilador. Para a classe poder se
 ## Como usar
 1. Criar um codespaces do projeto
 
-2. Dentro do codespaces, abrir o arquivo "exemplo.logic" e escrever a(s) expressão(ões) lógica(s). Ex: A = X XOR (Y OR R);
+2. Dentro do codespaces, abrir o arquivo "exemplo.logic" e escrever a(s) expressão(ões) lógica(s). Ex: **A = X XOR (Y OR R);**
   
 3. Executar o programa (escreva 'java -cp antlr.jar:gen LogicMain' no terminal)
 

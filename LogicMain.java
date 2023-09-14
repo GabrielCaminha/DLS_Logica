@@ -11,7 +11,7 @@ class LogicMain {
                 StringBuilder code = new StringBuilder();
 
                 for (LogicParser.StatementContext statement : program.statement()) {
-                    code.append(generateCode(statement)).append("\n");
+                    code.append(generateCode(statement)).append(";\n"); // Adicione o ponto e vírgula aqui
                 }
 
                 return code.toString();
@@ -22,7 +22,7 @@ class LogicMain {
                 String ifCode = String.format("if (%s) {", expressionCode);
                 String elseCode = "} else {\n  // Condição não atendida\n}";
                 String conditionMet = "\n  // Condição atendida\n";
-                return String.format("O circuito %s pode ser representado em:\n%s%s\n%s\n",
+                return String.format("O circuito %s pode ser representado em:\n%s%s\n%s;\n", // Adicione o ponto e vírgula aqui
                         circuitName, ifCode, conditionMet, elseCode);
             case "And":
                 String leftAnd = generateCode(tree.getChild(0));

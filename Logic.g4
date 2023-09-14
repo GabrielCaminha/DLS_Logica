@@ -3,8 +3,8 @@ grammar Logic;
 // Regras de entrada
 program: statement+;
 
-// Regra para declaração de circuito lógico
-statement: ID '=' expression;
+// Reescrevendo a regra para declaração de circuito lógico com ponto e vírgula
+statement: ID '=' expression ';';
 
 // Expressões lógicas
 expression: term #Ter
@@ -22,4 +22,4 @@ term: ID
 ID: [A-Za-z]+;
 
 // Ignorar espaços em branco e quebras de linha
-WS: [ \t\n\r]+ -> skip; 
+WS: [ \t\n\r]+ -> skip;

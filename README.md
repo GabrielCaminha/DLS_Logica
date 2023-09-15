@@ -44,6 +44,8 @@ O comando acima executa a classe LogicMain do compilador. Para a classe poder se
 
 4. A(s) expressão(ões) lógica(s) escolhida(s) será(ão) transformada(s) em código Java e pode(m) ser visualizada(s) no terminal.
 
+  Ex: <img src="resultImage.jpg" width="66%;"/>
+
 # Desenvolvedores
 <table>
   <tr>

@@ -1,2 +1,1 @@
-A = X XOR Y;
-P = NOT U;
+A = X XOR (Y OR R);

@@ -5,7 +5,7 @@
 - [Como Usar](#como-usar)
 
 ## Objetivo
-Criar um DSL para analisar expressões lógicas e transformá-la em código Java.
+Criar um DSL para analisar expressões lógicas e transformá-la(s) em código Java.
 
 ## Comandos para Compilar
 1. Compilar a descrição da linguagem fonte:
@@ -44,7 +44,7 @@ O comando acima executa a classe LogicMain do compilador. Para a classe poder se
 
 4. A(s) expressão(ões) lógica(s) escolhida(s) será(ão) transformada(s) em código Java e pode(m) ser visualizada(s) no terminal.
 
-  Ex: <img src="resultImage.jpg" width="66%;"/>
+  Ex: <br> <img src="printResult.jpg" width="66%;"/>
 
 # Desenvolvedores
 <table>

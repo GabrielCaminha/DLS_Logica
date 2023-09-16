@@ -21,10 +21,11 @@ class LogicMain {
 
                 for (LogicParser.StatementContext statement : program.statement()) {
                     String circuitName = statement.ID().getText();
-                    if (!declaredCircuits.contains(circuitName)) {
-                        variables.append(circuitName).append(", ");
-                        declaredCircuits.add(circuitName);
+                    if (declaredCircuits.contains(circuitName)) {
+                        throw new RuntimeException("Erro: Circuito duplicado - " + circuitName);
                     }
+                    declaredCircuits.add(circuitName);
+                    variables.append(circuitName).append(", ");
                 }
 
                 for (LogicParser.StatementContext statement : program.statement()) {
